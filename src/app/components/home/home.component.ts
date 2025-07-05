@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HousingLocationComponent } from './location/location.component';
 import { HousingLocation } from '../../types/interfaces/housingLocation';
+import { HousingService } from '../../services/housing/housing.service';
 
 @Component({
   selector: 'app-home',
@@ -22,46 +23,10 @@ import { HousingLocation } from '../../types/interfaces/housingLocation';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  housingLocationList: HousingLocation[] = [
-    {
-      id: 0,
-      name: 'House one',
-      city: 'Chicago',
-      state: 'IL',
-      photo: '/assets/',
-      availableUnits: 4,
-      wifi: true,
-      laundry: true,
-    },
-    {
-      id: 1,
-      name: 'House two',
-      city: 'Chicago',
-      state: 'IL',
-      photo: '/assets/',
-      availableUnits: 2,
-      wifi: true,
-      laundry: false,
-    },
-    {
-      id: 2,
-      name: 'House three',
-      city: 'Chicago',
-      state: 'IL',
-      photo: '/assets/',
-      availableUnits: 3,
-      wifi: false,
-      laundry: true,
-    },
-    {
-      id: 3,
-      name: 'House four',
-      city: 'Chicago',
-      state: 'IL',
-      photo: '/assets/',
-      availableUnits: 1,
-      wifi: false,
-      laundry: false,
-    },
-  ];
+  housingLocationList: HousingLocation[] = [];
+  housingService: HousingService = inject(HousingService);
+
+  constructor() {
+    this.housingLocationList = this.housingService.getAllHousingLocation();
+  }
 }
