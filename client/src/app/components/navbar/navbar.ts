@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { SearchBar } from '../search-bar/search-bar';
 import { MatButtonModule } from '@angular/material/button';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
-  imports: [SearchBar, MatButtonModule],
+  imports: [SearchBar, RouterModule, MatButtonModule],
   template: `
     <section class="flex flex-row items-center justify-between w-full">
       <div class="flex flex-row items-center">
@@ -17,10 +18,11 @@ import { MatButtonModule } from '@angular/material/button';
         <button
           class="ml-2 mr-2"
           type="button"
-          matButton="outlined"
+          mat-fab
+          extended
           color="primary"
         >
-          Home
+          <a [routerLink]="['/']" class="no-underline text-inherit"> Home </a>
         </button>
       </div>
 
