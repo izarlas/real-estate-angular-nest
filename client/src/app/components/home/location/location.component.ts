@@ -9,14 +9,11 @@ import { HousingLocation } from '../../../types/interfaces/housingLocation';
   template: `
     <section>
       <img
-        class="listing-photon"
         [src]="[housingLocation.photo]"
         alt="Exterior photo of {{ housingLocation.name }}"
       />
-      <h2 class="listing-heading">{{ housingLocation.name }}</h2>
-      <p class="listing-location">
-        {{ housingLocation.city }}, {{ housingLocation.state }}
-      </p>
+      <h2>{{ housingLocation.name }}</h2>
+      <p>{{ housingLocation.city }}, {{ housingLocation.state }}</p>
       <a [routerLink]="['/details', housingLocation.id]">Learn More</a>
     </section>
   `,

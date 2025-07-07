@@ -1,25 +1,21 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { Navbar } from './components/navbar/navbar';
 
 @Component({
   standalone: true,
   selector: 'app-root',
   template: `<main>
-    <header class="brand-name">
-      <img
-        class="brand-logo"
-        src="/assets/logo.png"
-        alt="logo"
-        aria-hidden="true"
-      />
+    <header>
+      <app-navbar> </app-navbar>
     </header>
-    <section class="content">
+    <section>
       <router-outlet></router-outlet>
     </section>
   </main>`,
   styleUrl: './app.component.scss',
-  imports: [RouterModule],
+  imports: [RouterModule, Navbar],
 })
 export class AppComponent {
-  title = 'my-app';
+  title = 'Real estate Angular Nest';
 }

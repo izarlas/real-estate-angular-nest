@@ -11,7 +11,7 @@ import { HousingService } from '../../services/housing/housing.service';
     <section>
       <form>
         <input type="text" placeholder="Filter by city" />
-        <button class="primary" type="button">Search</button>
+        <button type="button">Search</button>
       </form>
       <app-housing-location
         *ngFor="let housingLocation of housingLocationList"
