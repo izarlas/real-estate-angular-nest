@@ -36,8 +36,8 @@ This project is licensed under the MIT License.
 
 ### Todo
 
-- Setup Mongo
-- Setup Jest for both client/server
-- Setup proper monorepo
-- Setup single package.json and single test dir in root
-- Dockerize
+- Setup DB
+- Setup nest api with swagger/openapi
+- Dockerize (fe, be, db)
+- Setup Jest for testing
+- Improve read me
