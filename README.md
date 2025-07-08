@@ -40,4 +40,6 @@ This project is licensed under the MIT License.
 - Setup nest api with swagger/openapi
 - Dockerize (fe, be, db)
 - Setup Jest for testing
+- Add sign up/in
+- Add search bar logic
 - Improve read me
