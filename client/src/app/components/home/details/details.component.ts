@@ -26,7 +26,6 @@ import { Application } from '../application/application';
     </div>
     <app-application></app-application>
   </article>`,
-  styleUrl: './details.component.scss',
 })
 export class DetailsComponent {
   route: ActivatedRoute = inject(ActivatedRoute);

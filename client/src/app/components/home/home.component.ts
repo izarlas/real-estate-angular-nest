@@ -16,7 +16,6 @@ import { HousingService } from '../../services/housing/housing.service';
       </app-housing-location>
     </section>
   `,
-  styleUrl: './home.component.scss',
 })
 export class HomeComponent {
   housingLocationList: HousingLocation[] = [];

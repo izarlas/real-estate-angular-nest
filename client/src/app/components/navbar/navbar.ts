@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
   selector: 'app-navbar',
   imports: [SearchBar, RouterModule, MatButtonModule],
   template: `
-    <section class="flex flex-row items-center justify-between w-full">
+    <section class="flex flex-row items-center justify-between w-full m-2">
       <div class="flex flex-row items-center">
         <img
           class="w-[3rem]"
@@ -29,6 +29,5 @@ import { RouterModule } from '@angular/router';
       <app-search-bar class="flex"></app-search-bar>
     </section>
   `,
-  styleUrl: './navbar.scss',
 })
 export class Navbar {}

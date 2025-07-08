@@ -13,7 +13,6 @@ import { Navbar } from './components/navbar/navbar';
       <router-outlet></router-outlet>
     </section>
   </main>`,
-  styleUrl: './app.component.scss',
   imports: [RouterModule, Navbar],
 })
 export class AppComponent {

@@ -100,7 +100,6 @@ import { CommonModule } from '@angular/common';
       </form>
     </section>
   `,
-  styleUrl: './application.scss',
 })
 export class Application {
   housingService: HousingService = inject(HousingService);

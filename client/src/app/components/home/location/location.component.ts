@@ -8,8 +8,9 @@ import { MatButtonModule } from '@angular/material/button';
   selector: 'app-housing-location',
   imports: [CommonModule, RouterModule, MatButtonModule],
   template: `
-    <section class="flex flex-col p-2 w-[25rem] h-[28rem]">
+    <section class="flex flex-col justify-start p-2 w-[25rem] h-[25rem]">
       <img
+        class="h-[15rem]"
         [src]="[housingLocation.photo]"
         alt="Exterior photo of {{ housingLocation.name }}"
       />
@@ -33,7 +34,6 @@ import { MatButtonModule } from '@angular/material/button';
       </button>
     </section>
   `,
-  styleUrl: './location.component.scss',
 })
 export class HousingLocationComponent {
   @Input() housingLocation!: HousingLocation;

@@ -25,6 +25,5 @@ import { MatButtonModule } from '@angular/material/button';
       </form>
     </section>
   `,
-  styleUrl: './search-bar.scss',
 })
 export class SearchBar {}
