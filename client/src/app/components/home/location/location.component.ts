@@ -10,7 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
   template: `
     <section class="flex flex-col p-2">
       <img
-        class="max-w-md max-h-full s"
+        class="max-w-md max-h-full"
         [src]="[housingLocation.photo]"
         alt="Exterior photo of {{ housingLocation.name }}"
       />
@@ -18,7 +18,6 @@ import { MatButtonModule } from '@angular/material/button';
       <p>
         City: {{ housingLocation.city }}, State: {{ housingLocation.state }}
       </p>
-
       <button
         type="button"
         mat-fab

@@ -10,7 +10,6 @@ import { MatButtonModule } from '@angular/material/button';
     <section class="flex flex-none">
       <form>
         <mat-form-field class="example-full-width">
-          <mat-label>Find your dream home</mat-label>
           <input type="text" matInput placeholder="Filter by city" />
         </mat-form-field>
         <button
