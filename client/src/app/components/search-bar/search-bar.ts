@@ -7,8 +7,8 @@ import { MatButtonModule } from '@angular/material/button';
   selector: 'app-search-bar',
   imports: [MatInputModule, MatIconModule, MatButtonModule],
   template: `
-    <section class="flex flex-none">
-      <form>
+    <section class="flex flex-none -mb-4">
+      <form class="flex">
         <mat-form-field class="example-full-width">
           <input type="text" matInput placeholder="Filter by city" />
         </mat-form-field>

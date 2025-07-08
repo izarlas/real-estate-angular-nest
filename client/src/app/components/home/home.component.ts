@@ -8,7 +8,7 @@ import { HousingService } from '../../services/housing/housing.service';
   selector: 'app-home',
   imports: [CommonModule, HousingLocationComponent],
   template: `
-    <section class="flex align-center">
+    <section class="flex align-center flex-wrap items-end">
       <app-housing-location
         *ngFor="let housingLocation of housingLocationList"
         [housingLocation]="housingLocation"

@@ -8,9 +8,8 @@ import { MatButtonModule } from '@angular/material/button';
   selector: 'app-housing-location',
   imports: [CommonModule, RouterModule, MatButtonModule],
   template: `
-    <section class="flex flex-col p-2">
+    <section class="flex flex-col p-2 w-[25rem] h-[28rem]">
       <img
-        class="max-w-md max-h-full"
         [src]="[housingLocation.photo]"
         alt="Exterior photo of {{ housingLocation.name }}"
       />

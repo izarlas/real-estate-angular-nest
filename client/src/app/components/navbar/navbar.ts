@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
     <section class="flex flex-row items-center justify-between w-full">
       <div class="flex flex-row items-center">
         <img
-          class="w-full max-w-1/30"
+          class="w-[3rem]"
           src="/assets/logo.png"
           alt="logo"
           aria-hidden="true"
@@ -26,7 +26,7 @@ import { RouterModule } from '@angular/router';
         </button>
       </div>
 
-      <app-search-bar></app-search-bar>
+      <app-search-bar class="flex"></app-search-bar>
     </section>
   `,
   styleUrl: './navbar.scss',
