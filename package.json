@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "client:start": "ng serve",
+    "client:start": "ng serve --host 0.0.0.0",
     "client:build": "ng build",
     "client:test": "ng test",
     "server:start": "nest start --watch",
