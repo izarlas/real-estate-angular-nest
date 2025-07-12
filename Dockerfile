@@ -10,4 +10,4 @@ COPY . .
 
 EXPOSE 4200
 
-CMD ["sh", "-c", "cd client && npm run client:start"]
+CMD ["sh", "-c", "npm run start"]
