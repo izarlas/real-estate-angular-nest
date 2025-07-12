@@ -6,9 +6,9 @@ This project aims to demonstrate a real estate web application implementation us
 
 - Frontend - Angular 20
 - Backend - NestJs
+- Database - PostgreSQL
 - API - Rest
 - Auth - Json Web Token (JWT)
-- Database - MongoDB
 - DevOps - Docker, Swagger, OpenAPI
 
 ### Features
@@ -21,10 +21,16 @@ This project aims to demonstrate a real estate web application implementation us
   ```
 - Start both client and server:
   ```sh
-  npm start
+  npm run start
   ```
+- Run the client, server and the database using compose:
+
+  ```sh
+  docker-compose up -d
+  ```
+
 - Access the client UI at [localhost:4200](http://localhost:4200)
-- Access the server at [localhost:4000](http://localhost:4000)
+- Access the server at [localhost:3000](http://localhost:3000)
 
 ### API Endpoints
 
@@ -36,9 +42,7 @@ This project is licensed under the MIT License.
 
 ### Todo
 
-- Setup DB
 - Setup nest api with swagger/openapi
-- Dockerize (fe, be, db)
 - Setup Jest for testing
 - Add sign up/in
 - Add search bar logic
