@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HousingLocation } from '../../types/interfaces/housingLocation';
+import { House } from '../../types/interfaces/house';
 
 @Injectable({
   providedIn: 'root',
 })
 export class HousingService {
-  protected housingLocationList: HousingLocation[] = [
+  protected housingLocationList: House[] = [
     {
       id: 0,
       name: 'House one',
@@ -50,13 +50,13 @@ export class HousingService {
 
   constructor() {}
 
-  getAllHousingLocation(): HousingLocation[] {
+  getAllHousingLocation(): House[] {
     return this.housingLocationList;
   }
 
-  getHousingLocationById(id: number): HousingLocation | undefined {
+  getHousingLocationById(id: number): House | undefined {
     return this.housingLocationList.find(
-      (housingLocation: HousingLocation) => housingLocation.id === id
+      (housingLocation: House) => housingLocation.id === id,
     );
   }
 

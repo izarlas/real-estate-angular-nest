@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { HousingLocation } from '../../../types/interfaces/housingLocation';
+import { House } from '../../../types/interfaces/house';
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({
@@ -36,5 +36,5 @@ import { MatButtonModule } from '@angular/material/button';
   `,
 })
 export class HousingLocationComponent {
-  @Input() housingLocation!: HousingLocation;
+  @Input() housingLocation!: House;
 }

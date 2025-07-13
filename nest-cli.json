@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "server": {
+      "type": "application",
+      "root": "server",
+      "entryFile": "main",
+      "sourceRoot": "server/src",
+      "compilerOptions": {
+        "tsConfigPath": "tsconfig.build.json",
+        "webpack": false,
+        "watchAssets": true,
+        "assets": [],
+        "deleteOutDir": true
+      }
+    }
+  },
+  "defaultProject": "server"
+}
