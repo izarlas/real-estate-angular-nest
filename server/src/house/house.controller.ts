@@ -1,15 +1,19 @@
 import {
+  Body,
   Controller,
   Delete,
   Get,
   HttpCode,
+  Param,
+  ParseIntPipe,
   Patch,
   Post,
   Put,
   Req,
 } from "@nestjs/common";
 import { HouseService } from "./house.service";
-import { House } from "./house.entity";
+import { HouseInterface } from "./house.interface";
+import { HouseDto } from "./house.dto";
 
 @Controller("house")
 export class HouseController {
@@ -17,29 +21,47 @@ export class HouseController {
 
   @Get()
   @HttpCode(200)
-  findAll(@Req() request: Request): House[] {
-    return;
+  findAll(): Promise<HouseInterface[]> {
+    return this.houseService.findAll();
   }
 
   @Get(":id")
   @HttpCode(200)
-  findOne(): House {
-    return;
+  findOne(
+    @Param("id", ParseIntPipe) id: number
+  ): Promise<HouseInterface | null> {
+    return this.houseService.findOne(id);
   }
 
   @Post()
   @HttpCode(201)
-  create() {}
+  create(@Body() house: HouseDto): Promise<HouseInterface> {
+    return this.houseService.create(house);
+  }
 
   @Put(":id")
   @HttpCode(200)
-  update() {}
+  update(
+    @Param("id", ParseIntPipe) id: number,
+    @Body() house: HouseDto
+  ): Promise<HouseInterface | null> {
+    return this.houseService.update(id, house);
+  }
 
   @Patch(":id")
   @HttpCode(200)
-  partialUpdate() {}
+  partialUpdate(
+    @Param("id", ParseIntPipe) id: number,
+    @Body() house: Partial<HouseDto>
+  ): Promise<HouseInterface | null> {
+    return this.houseService.partialUpdate(id, house);
+  }
 
   @Delete(":id")
   @HttpCode(204)
-  remove() {}
+  remove(
+    @Param("id", ParseIntPipe) id: number
+  ): Promise<HouseInterface | null> {
+    return this.houseService.remove(id);
+  }
 }

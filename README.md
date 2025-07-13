@@ -42,9 +42,10 @@ This project is licensed under the MIT License.
 
 ### Todo
 
-- Setup nest api with swagger/openapi
 - Setup Jest for testing
 - Add sign up/in
 - Add search bar logic
 - Improve read me
 - Ensure images width/height respond to different screen sizes (in both home/details)
+- Add jest tests for apis with high coverage
+- Add custom error handling for apis
