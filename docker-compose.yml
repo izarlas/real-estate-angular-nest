@@ -12,6 +12,8 @@ services:
     working_dir: /app
     environment:
       - CHOKIDAR_USEPOLLING=true
+    depends_on:
+      - server
 
   server:
     container_name: server
@@ -24,19 +26,23 @@ services:
       - .:/app
       - /app/node_modules
     working_dir: /app
+    env_file:
+      - .env
     environment:
       - CHOKIDAR_USEPOLLING=true
+    depends_on:
+      - postgres
 
   postgres:
     image: postgres:16
     container_name: database
     restart: always
+    ports:
+      - "5432:5432"
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: postgresdb
-    ports:
-      - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
 
