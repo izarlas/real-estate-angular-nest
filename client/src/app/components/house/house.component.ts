@@ -5,7 +5,7 @@ import { House } from '../../types/interfaces/house';
 import { HousingService } from '../../services/housing/housing.service';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-house',
   imports: [CommonModule, HousingLocationComponent],
   template: `
     <section class="flex align-center flex-wrap items-end">
@@ -17,7 +17,7 @@ import { HousingService } from '../../services/housing/housing.service';
     </section>
   `,
 })
-export class HomeComponent {
+export class HouseComponent {
   housingLocationList: House[] = [];
   housingService: HousingService = inject(HousingService);
 
