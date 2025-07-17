@@ -5,23 +5,31 @@ import { House } from '../../types/interfaces/house';
 import { HousingService } from '../../services/housing/housing.service';
 
 @Component({
-  selector: 'app-house',
+  selector: 'houses-layout',
   imports: [CommonModule, HousingLocationComponent],
   template: `
     <section class="flex align-center flex-wrap items-end">
-      <app-housing-location
-        *ngFor="let housingLocation of housingLocationList"
-        [housingLocation]="housingLocation"
-      >
+      <p class="text-2xl p-4" *ngIf="houses.length === 0">
+        There are no houses currently available
+      </p>
+      <app-housing-location *ngFor="let house of houses" [house]="house">
       </app-housing-location>
     </section>
   `,
 })
-export class HouseComponent {
-  housingLocationList: House[] = [];
+export class HousesLayoutComponent {
+  houses: House[] = [];
   housingService: HousingService = inject(HousingService);
 
-  constructor() {
-    this.housingLocationList = this.housingService.getAllHousingLocation();
+  constructor() {}
+
+  ngOnInit() {
+    this.housingService
+      .findAllHouses()
+      .subscribe((houses: House[]) => (this.houses = houses));
+  }
+
+  ngOnDestroy() {
+    // this.housingService.unsubscribe();
   }
 }

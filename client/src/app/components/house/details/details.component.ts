@@ -10,17 +10,15 @@ import { Application } from '../application/application';
   imports: [CommonModule, Application],
   template: ` <article class="flex">
     <div class="flex flex-col">
-      <img class="max-w-2xl max-h-full" [src]="housingLocation?.photo" />
+      <img class="max-w-2xl max-h-full" [src]="house?.photo" />
       <section class="pt-2 pb-2">
-        <h2>{{ housingLocation?.name }}</h2>
-        <p>{{ housingLocation?.city }}, {{ housingLocation?.state }}</p>
+        <h2>{{ house?.name }}</h2>
+        <p>{{ house?.city }}, {{ house?.state }}</p>
         <h2>About this housing location</h2>
         <ul>
-          <li>Units available: {{ housingLocation?.availableUnits }}</li>
-          <li>Does this location have wifi: {{ housingLocation?.wifi }}</li>
-          <li>
-            Does this location have laundry: {{ housingLocation?.laundry }}
-          </li>
+          <li>Units available: {{ house?.availableUnits }}</li>
+          <li>Does this location have wifi: {{ house?.wifi }}</li>
+          <li>Does this location have laundry: {{ house?.laundry }}</li>
         </ul>
       </section>
     </div>
@@ -30,11 +28,14 @@ import { Application } from '../application/application';
 export class DetailsComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
   housingService: HousingService = inject(HousingService);
-  housingLocation: House | undefined;
+  house: House | undefined = undefined;
 
   constructor() {
     const housingLocationId = Number(this.route.snapshot.params['id']);
-    this.housingLocation =
-      this.housingService.getHousingLocationById(housingLocationId);
+    this.housingService
+      .findHouseById(housingLocationId)
+      .subscribe((house: House) => {
+        this.house = house;
+      });
   }
 }

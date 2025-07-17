@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router';
 import { DetailsComponent } from './components/house/details/details.component';
-import { HouseComponent } from './components/house/house.component';
+import { HousesLayoutComponent } from './components/house/houses-layout.component';
 
 export const routes: Routes = [
   {
     path: '',
-    component: HouseComponent,
-    title: 'House',
+    component: HousesLayoutComponent,
+    title: 'Browse homes',
   },
   { path: 'details/:id', component: DetailsComponent, title: 'Details Page' },
 ];

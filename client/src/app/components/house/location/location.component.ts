@@ -11,13 +11,11 @@ import { MatButtonModule } from '@angular/material/button';
     <section class="flex flex-col justify-start p-2 w-[25rem] h-[25rem]">
       <img
         class="h-[15rem]"
-        [src]="[housingLocation.photo]"
-        alt="Exterior photo of {{ housingLocation.name }}"
+        [src]="[house.photo]"
+        alt="Exterior photo of {{ house.name }}"
       />
-      <h2>Name: {{ housingLocation.name }}</h2>
-      <p>
-        City: {{ housingLocation.city }}, State: {{ housingLocation.state }}
-      </p>
+      <h2>Name: {{ house.name }}</h2>
+      <p>City: {{ house.city }}, State: {{ house.state }}</p>
       <button
         type="button"
         mat-fab
@@ -26,7 +24,7 @@ import { MatButtonModule } from '@angular/material/button';
         class="mt-4 self-start px-6"
       >
         <a
-          [routerLink]="['/details', housingLocation.id]"
+          [routerLink]="['/details', house.id]"
           class="no-underline text-inherit"
         >
           Learn More
@@ -36,5 +34,5 @@ import { MatButtonModule } from '@angular/material/button';
   `,
 })
 export class HousingLocationComponent {
-  @Input() housingLocation!: House;
+  @Input() house: Partial<House> = {};
 }
