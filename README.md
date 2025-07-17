@@ -32,6 +32,9 @@ This project aims to demonstrate a real estate web application implementation us
 - Access the client UI at [localhost:4200](http://localhost:4200)
 - Access the server at [localhost:3000](http://localhost:3000)
 
+- Alternatively, use the quick start bash script from root running `./scripts/initialize.sh`
+  The script removes any docker containers and clears images, re-builds the containers, creates db and seeds it with mock data
+
 ### API Endpoints
 
 ### Testing
