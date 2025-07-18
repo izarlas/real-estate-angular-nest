@@ -1,28 +1,28 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity({ name: 'house_entity' })
+@Entity()
 export class HouseEntity {
-  @PrimaryGeneratedColumn({ name: 'id' })
+  @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ name: 'name' })
+  @Column()
   name: string;
 
-  @Column({ name: 'city' })
+  @Column()
   city: string;
 
-  @Column({ name: 'state' })
+  @Column()
   state: string;
 
-  @Column({ name: 'photo' })
+  @Column()
   photo: string;
 
-  @Column({ name: 'available_units' })
+  @Column()
   availableUnits: number;
 
-  @Column({ name: 'wifi' })
+  @Column()
   wifi: boolean;
 
-  @Column({ name: 'laundry' })
+  @Column()
   laundry: boolean;
 }
