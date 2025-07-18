@@ -33,7 +33,7 @@ This project aims to demonstrate a real estate web application implementation us
 - Access the server at [localhost:3000](http://localhost:3000)
 
 - Alternatively, use the quick start bash script from root running `./scripts/initialize.sh`
-  The script removes any docker containers and clears images, re-builds the containers, creates db and seeds it with mock data
+  The script removes and clears any docker containers and images, re-builds the containers and finally starts the postgresql with an initial mock dataset
 
 ### API Endpoints
 

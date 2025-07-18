@@ -20,7 +20,7 @@ export class HousingService {
 
   findHouseById(id: number): Observable<House> {
     return this.http.get<House>(
-      `${CONSTANTS.APIS.BASE_URL}${CONSTANTS.APIS.ENDPOINTS.HOUSE}${id}`,
+      `${CONSTANTS.APIS.BASE_URL}${CONSTANTS.APIS.ENDPOINTS.HOUSE}/${id}`,
     );
   }
 
