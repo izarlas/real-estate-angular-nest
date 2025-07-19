@@ -10,15 +10,18 @@ import { Application } from '../application/application';
   imports: [CommonModule, Application],
   template: ` <article class="flex">
     <div class="flex flex-col">
-      <img class="max-w-2xl max-h-full" [src]="house?.photo" />
+      <img
+        class="max-w-2xl max-h-full"
+        [src]="'http://localhost:3000/uploads/' + house.photo"
+      />
       <section class="pt-2 pb-2">
-        <h2>{{ house?.name }}</h2>
-        <p>{{ house?.city }}, {{ house?.state }}</p>
+        <h2>{{ house.name }}</h2>
+        <p>{{ house.city }}, {{ house.state }}</p>
         <h2>About this housing location</h2>
         <ul>
-          <li>Units available: {{ house?.availableUnits }}</li>
-          <li>Does this location have wifi: {{ house?.wifi }}</li>
-          <li>Does this location have laundry: {{ house?.laundry }}</li>
+          <li>Units available: {{ house.availableUnits }}</li>
+          <li>Does this location have wifi: {{ house.wifi }}</li>
+          <li>Does this location have laundry: {{ house.laundry }}</li>
         </ul>
       </section>
     </div>
@@ -28,7 +31,7 @@ import { Application } from '../application/application';
 export class DetailsComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
   housingService: HousingService = inject(HousingService);
-  house: House | undefined = undefined;
+  house: Partial<House> = {};
 
   constructor() {
     const housingLocationId = Number(this.route.snapshot.params['id']);

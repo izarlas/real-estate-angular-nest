@@ -11,7 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
     <section class="flex flex-col justify-start p-2 w-[25rem] h-[25rem]">
       <img
         class="h-[15rem]"
-        [src]="[house.photo]"
+        [src]="'http://localhost:3000/uploads/' + house.photo"
         alt="Exterior photo of {{ house.name }}"
       />
       <h2>Name: {{ house.name }}</h2>

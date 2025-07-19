@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
       <div class="flex flex-row items-center">
         <img
           class="w-[3rem]"
-          src="/assets/logo.png"
+          src="assets/logo.png"
           alt="logo"
           aria-hidden="true"
         />

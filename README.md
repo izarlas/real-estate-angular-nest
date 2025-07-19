@@ -54,3 +54,4 @@ This project is licensed under the MIT License.
 - Ensure images width/height respond to different screen sizes (in both house/details)
 - Add jest tests for apis with high coverage
 - Add custom error handling for apis
+- Improve swagger

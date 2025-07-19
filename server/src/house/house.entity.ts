@@ -14,7 +14,7 @@ export class HouseEntity {
   @Column()
   state!: string;
 
-  @Column()
+  @Column({ nullable: true })
   photo!: string;
 
   @Column()
