@@ -3,26 +3,26 @@ import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 @Entity()
 export class HouseEntity {
   @PrimaryGeneratedColumn()
-  id: number;
+  id!: number;
 
   @Column()
-  name: string;
+  name!: string;
 
   @Column()
-  city: string;
+  city!: string;
 
   @Column()
-  state: string;
+  state!: string;
 
   @Column()
-  photo: string;
+  photo!: string;
 
   @Column()
-  availableUnits: number;
+  availableUnits!: number;
 
   @Column()
-  wifi: boolean;
+  wifi!: boolean;
 
   @Column()
-  laundry: boolean;
+  laundry!: boolean;
 }

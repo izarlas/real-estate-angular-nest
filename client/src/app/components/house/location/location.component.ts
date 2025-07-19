@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { House } from '../../../types/interfaces/house';
+import { House } from '@client/types/interfaces/house';
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({

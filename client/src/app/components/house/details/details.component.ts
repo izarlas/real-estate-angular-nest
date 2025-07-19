@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { HousingService } from '../../../services/housing/housing.service';
-import { House } from '../../../types/interfaces/house';
+import { HousingService } from '@client/services/housing/housing.service';
+import { House } from '@client/types/interfaces/house';
 import { Application } from '../application/application';
 
 @Component({

@@ -45,6 +45,8 @@ This project is licensed under the MIT License.
 
 ### Todo
 
+- Add class-validation pipes in nest
+- Ensure the server can run without docker
 - Setup Jest for testing
 - Add sign up/in
 - Add search bar logic

@@ -5,7 +5,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { HousingService } from '../../../services/housing/housing.service';
+import { HousingService } from '@client/services/housing/housing.service';
 import {
   MatError,
   MatFormField,

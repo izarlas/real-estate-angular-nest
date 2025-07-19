@@ -6,7 +6,7 @@
       "entryFile": "main",
       "sourceRoot": "server/src",
       "compilerOptions": {
-        "tsConfigPath": "tsconfig.build.json",
+        "tsConfigPath": "server/tsconfig.build.json",
         "webpack": false,
         "watchAssets": true,
         "assets": [],
